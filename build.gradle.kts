@@ -1,0 +1,61 @@
+import java.util.Locale
+
+plugins {
+    id("org.jetbrains.intellij.platform") version "2.10.0"
+    kotlin("jvm") version "2.0.0"
+}
+
+group = "net.ace"
+version = "1.0.0"
+
+repositories {
+    mavenCentral()
+    intellijPlatform {
+        defaultRepositories()
+    }
+}
+
+dependencies {
+    intellijPlatform {
+        create("IC", "2024.3.3")
+    }
+}
+
+intellijPlatform {
+    pluginConfiguration {
+        ideaVersion {
+            sinceBuild = "223"
+            untilBuild = "242.*"
+        }
+    }
+}
+
+tasks {
+    withType<JavaCompile> {
+        sourceCompatibility = "17"
+        targetCompatibility = "17"
+    }
+    withType<JavaCompile> {
+        options.encoding = "UTF-8"
+    }
+    withType<ProcessResources> {
+        filteringCharset = "UTF-8"
+    }
+
+    withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+        compilerOptions {
+            jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17
+            languageVersion = org.jetbrains.kotlin.gradle.dsl.KotlinVersion.KOTLIN_1_9
+        }
+    }
+    patchPluginXml {
+        sinceBuild.set("223")
+        untilBuild.set("242.*")
+
+        pluginDescription.set(provider {
+            val lang = Locale.getDefault().language
+            val descFile = if (lang == "zh") "pluginDescription_zh_CN.html" else "pluginDescription.html"
+            file("src/main/resources/META-INF/$descFile").readText()
+        })
+    }
+}

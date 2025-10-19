@@ -1,0 +1,20 @@
+<idea-plugin>
+    <id>net.ace.grmw</id>
+    <name>Gradle Wrapper Mirror</name>
+    <vendor email="BiliBiliACEGE-Github@outlook.com" url="https://github.com/BiliBiliACEGE">Ace哥</vendor>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <notificationGroup id="Gradle Wrapper Mirror"
+                           displayType="BALLOON"/>
+    </extensions>
+    <extensions defaultExtensionNs="com.intellij">
+        <applicationService serviceImplementation="net.ace.grmw.GrmwConfig"/>
+        <applicationConfigurable parentId="tools"
+                                 instance="net.ace.grmw.GrmwSettings"
+                                 displayName="Gradle Wrapper Mirror"/>
+        <postStartupActivity implementation="net.ace.grmw.GrmwPostActivity"/>
+    </extensions>
+    <resource-bundle>messages.GrmwBundle</resource-bundle>
+</idea-plugin>
