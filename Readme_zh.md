@@ -1,5 +1,5 @@
 # Gradle Wrapper Mirror 插件
-中文 | [English](readme.md)
+中文 | [English](Readme)
 
 一键把 Gradle 官方下载地址切换成国内镜像，告别 10 KB/s，**极速下载**！
 

@@ -1,6 +1,6 @@
 # Gradle Wrapper Mirror
 
-English | [中文](readme_zh.md)
+English | [中文](Readme_zh)
 
 Make Gradle distribution downloads **fast & stable** in China by one-click switching among major mirrors (Aliyun, Tencent, Tsinghua ...).
 
