@@ -48,14 +48,4 @@ tasks {
             languageVersion = org.jetbrains.kotlin.gradle.dsl.KotlinVersion.KOTLIN_1_9
         }
     }
-    patchPluginXml {
-        sinceBuild.set("223")
-        untilBuild.set("242.*")
-
-        pluginDescription.set(provider {
-            val lang = Locale.getDefault().language
-            val descFile = if (lang == "zh") "pluginDescription_zh_CN.html" else "pluginDescription.html"
-            file("src/main/resources/META-INF/$descFile").readText()
-        })
-    }
 }
