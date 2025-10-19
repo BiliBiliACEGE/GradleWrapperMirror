@@ -24,6 +24,7 @@ class GrmwSettings : Configurable {
 
     private val customField = JBTextField()
     private val autoReplaceCheck = JBCheckBox(GrmwBundle.message("settings.autoReplace"))
+    private val onlyOfficialCheck = JBCheckBox(GrmwBundle.message("settings.onlyReplaceOfficial"))
 
     init {
         combo.addActionListener { updateCustomField() }
@@ -35,17 +36,20 @@ class GrmwSettings : Configurable {
             .addLabeledComponent(GrmwBundle.message("settings.mirror"), combo)
             .addLabeledComponent(GrmwBundle.message("settings.custom"), customField)
             .addComponent(autoReplaceCheck)
+            .addComponent(onlyOfficialCheck)
             .panel
 
     override fun isModified(): Boolean =
         combo.selectedItem.let { mirrorItems[it] } != config.state.mirrorKey
                 || customField.text != config.state.customUrl
                 || autoReplaceCheck.isSelected != config.state.autoReplaceOnOpen
+                || onlyOfficialCheck.isSelected != config.state.onlyReplaceOfficial
 
     override fun apply() {
         config.state.mirrorKey = mirrorItems[combo.selectedItem] ?: GrmwConfig.Mirror.ALIYUN.key
         config.state.customUrl = customField.text.trim()
         config.state.autoReplaceOnOpen = autoReplaceCheck.isSelected
+        config.state.onlyReplaceOfficial = onlyOfficialCheck.isSelected
 
         ProjectManager.getInstance().openProjects.forEach { prj ->
             GrmwReplaceLogic.execute(prj)
@@ -59,6 +63,7 @@ class GrmwSettings : Configurable {
 
         customField.text = config.state.customUrl
         autoReplaceCheck.isSelected = config.state.autoReplaceOnOpen
+        onlyOfficialCheck.isSelected = config.state.onlyReplaceOfficial
         updateCustomField()
     }
 

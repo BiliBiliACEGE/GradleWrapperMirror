@@ -16,6 +16,9 @@ object GrmwReplaceLogic {
         wrapperFile.inputStream().use { props.load(it) }
 
         val oldUrl = props.getProperty("distributionUrl") ?: return
+        if (GrmwConfig.getInstance().state.onlyReplaceOfficial &&
+            !oldUrl.contains("services.gradle.org")
+        ) return
         // 只替换官方地址
         if (!oldUrl.contains("services.gradle.org")) return
 

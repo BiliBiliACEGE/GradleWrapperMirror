@@ -8,7 +8,8 @@ class GrmwConfig : PersistentStateComponent<GrmwConfig.State> {
     data class State(
         var mirrorKey: String = "aliyun",
         var customUrl: String = "",
-        var autoReplaceOnOpen: Boolean = true
+        var autoReplaceOnOpen: Boolean = true,
+        var onlyReplaceOfficial: Boolean = true
     )
 
     private var myState = State()
