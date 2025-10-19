@@ -2,7 +2,7 @@
     <id>net.ace.grmw</id>
     <name>Gradle Wrapper Mirror</name>
     <vendor email="BiliBiliACEGE-Github@outlook.com" url="https://github.com/BiliBiliACEGE">Ace哥</vendor>
-    <description>Gradle Wrapper Mirror 一键把官方下载地址切换成国内镜像（阿里云、腾讯、清华），自动或快捷键触发，完全兼容 Configuration Cache，支持自定义镜像。</description>
+    <description>Gradle Wrapper Mirror speeds up downloads by switching to domestic mirrors (Aliyun, Tencent, Tsinghua) automatically or with one shortcut. Compatible with Configuration Cache and supports custom endpoints.</description>
 
     <depends>com.intellij.modules.platform</depends>
 
