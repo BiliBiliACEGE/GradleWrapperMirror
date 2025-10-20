@@ -9,7 +9,14 @@ class GrmwConfig : PersistentStateComponent<GrmwConfig.State> {
         var mirrorKey: String = "aliyun",
         var customUrl: String = "",
         var autoReplaceOnOpen: Boolean = true,
-        var onlyReplaceOfficial: Boolean = true
+        var onlyReplaceOfficial: Boolean = true,
+        var editableMirrors: MutableList<EditableMirror> = DEFAULT_EDITABLE
+    )
+
+    data class EditableMirror(
+        var key: String = "",
+        var name: String = "",
+        var url: String = ""
     )
 
     private var myState = State()
@@ -19,26 +26,19 @@ class GrmwConfig : PersistentStateComponent<GrmwConfig.State> {
         myState = state
     }
 
-    private fun selectedMirror(): Mirror =
-        Mirror.entries.find { it.key == myState.mirrorKey } ?: Mirror.ALIYUN
-
     fun resolveUrl(version: String): String {
-        val base = when (selectedMirror()) {
-            Mirror.CUSTOM -> myState.customUrl
-            else -> selectedMirror().url
-        }.trimEnd('/')
-        return "$base/gradle-$version-bin.zip"
-    }
-
-    enum class Mirror(val key: String, val url: String) {
-        OFFICIAL("official", "https://services.gradle.org/distributions"),
-        ALIYUN("aliyun", "https://mirrors.aliyun.com/gradle"),
-        TENCENT("tencent", "https://mirrors.cloud.tencent.com/gradle"),
-        TUNA("tuna", "https://mirrors.tuna.tsinghua.edu.cn/gradle"),
-        CUSTOM("custom", "")
+        val base = myState.editableMirrors.find { it.key == myState.mirrorKey }?.url
+            ?.takeIf { it.isNotBlank() } ?: myState.customUrl
+        return "${base.trimEnd('/')}/gradle-$version-bin.zip"
     }
 
     companion object {
         fun getInstance() = service<GrmwConfig>()
+        val DEFAULT_EDITABLE = mutableListOf(
+            EditableMirror("official", "Official", "https://services.gradle.org/distributions"),
+            EditableMirror("aliyun", "Aliyun", "https://mirrors.aliyun.com/gradle"),
+            EditableMirror("tencent", "Tencent", "https://mirrors.cloud.tencent.com/gradle"),
+            EditableMirror("tuna", "Tsinghua Tuna", "https://mirrors.tuna.tsinghua.edu.cn/gradle")
+        )
     }
 }
