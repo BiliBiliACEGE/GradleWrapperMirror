@@ -2,7 +2,25 @@
     <id>net.ace.grmw</id>
     <name>Gradle Wrapper Mirror</name>
     <vendor email="BiliBiliACEGE-Github@outlook.com" url="https://github.com/BiliBiliACEGE">Ace哥</vendor>
-    <description>Gradle Wrapper Mirror speeds up downloads by switching to domestic mirrors (Aliyun, Tencent, Tsinghua) automatically or with one shortcut. Compatible with Configuration Cache and supports custom endpoints.</description>
+    <description><![CDATA[
+      <h3>Gradle Wrapper Mirror</h3>
+      <p>Automatically replace Gradle Wrapper distributionUrl with fast domestic mirrors (Aliyun, Tencent, Tsinghua Tuna, or your own URL) when opening/importing a project.</p>
+      <p>Supports:</p>
+      <ul>
+        <li>One-click replacement or auto-replace on project open</li>
+        <li>Editable built-in mirror list (prevent link failure)</li>
+        <li>Custom mirror URL</li>
+        <li>“Replace only official address” switch</li>
+      </ul>
+      <p>No more slow services.gradle.org downloads—enjoy flying speed!</p>
+    ]]></description>
+
+    <change-notes><![CDATA[
+      <ul>
+        <li>1.0.0: Initial release with auto-replace and editable mirror table</li>
+      </ul>
+    ]]>
+    </change-notes>
 
     <depends>com.intellij.modules.platform</depends>
 
