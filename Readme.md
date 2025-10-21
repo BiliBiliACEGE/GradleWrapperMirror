@@ -4,7 +4,7 @@
 
 打开 Gradle 项目时，自动把 `services.gradle.org` 替换成国内高速镜像（阿里云、腾讯云、清华 TUNA）。
 
-## ✅ 实际功能
+## ✅ 功能
 - 自动识别 `gradle-wrapper.properties` 中的官方下载地址
 - 项目打开瞬间完成替换（可关闭）
 - 按 `Ctrl + Shift + G` 手动重新替换
