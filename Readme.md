@@ -14,13 +14,13 @@
 - IntelliJ IDEA 2022.3 及以上
 
 ## 📦 安装
-IDE → Settings → Plugins → Marketplace → 搜索 **"Gradle Wrapper Mirror"** → Install
+IDE → 设置 → 插件 → Marketplace → 搜索 **"Gradle Wrapper Mirror"** → 安装
 
 ## 🚀 使用
 1. 打开任意 Gradle 项目
 2. 插件自动应用镜像地址
 3. 需要换镜像：  
-   File → Settings → Gradle Wrapper Mirror → 选择镜像 → Apply
+   IDE → 设置 → 工具 → Gradle Wrapper Mirror → 选择镜像 → 应用
 
 ## 🛠️ 编译
 ```bash
