@@ -23,7 +23,7 @@
     </change-notes>
 
     <depends>com.intellij.modules.platform</depends>
-
+    <idea-version since-build="231"/>
     <extensions defaultExtensionNs="com.intellij">
         <notificationGroup id="Gradle Wrapper Mirror"
                            displayType="BALLOON"/>
