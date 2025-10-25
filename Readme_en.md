@@ -14,7 +14,8 @@ Automatically replace `services.gradle.org` with fast domestic mirrors (Aliyun, 
 - IntelliJ IDEA 2022.3+ (build 223.*)
 
 ## 📦 Install
-IDE → Settings → Plugins → Marketplace → search **"Gradle Wrapper Mirror"** → Install
+IDE → Settings → Plugins → Marketplace → search **"Gradle Wrapper Mirror"** → Install    
+Releases → Download the jar file → IDE → Settings → Plugins → Gear → **Install Plugin from Disk** → Select the **downloaded jar** to install
 
 ## 🚀 Use
 1. Open any Gradle project
