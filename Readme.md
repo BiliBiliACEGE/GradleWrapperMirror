@@ -14,7 +14,10 @@
 - IntelliJ IDEA 2022.3 及以上
 
 ## 📦 安装
+从Marketplace商店安装:  
 IDE → 设置 → 插件 → Marketplace → 搜索 **"Gradle Wrapper Mirror"** → 安装    
+
+从本地安装:  
 Releases → 下载jar文件 → IDE → 设置 → 插件 → 齿轮 → **从磁盘安装插件** → 选择**下载好的jar**安装即可
 
 ## 🚀 使用
