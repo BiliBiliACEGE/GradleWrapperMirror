@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "net.ace"
-version = "1.0.3"
+version = "1.0.0"
 
 repositories {
     mavenCentral()
@@ -24,7 +24,7 @@ dependencies {
 intellijPlatform {
     pluginConfiguration {
         ideaVersion {
-            sinceBuild = "231.*"
+            sinceBuild = "231"
         }
     }
 }
