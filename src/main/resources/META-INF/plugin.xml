@@ -4,20 +4,33 @@
     <vendor email="BiliBiliACEGE-Github@outlook.com" url="https://github.com/BiliBiliACEGE">Ace哥</vendor>
     <description><![CDATA[
       <h3>Gradle Wrapper Mirror</h3>
-      <p>Automatically replace Gradle Wrapper distributionUrl with fast domestic mirrors (Aliyun, Tencent, Tsinghua Tuna, or your own URL) when opening/importing a project.</p>
+      <p>Automatically replace Gradle Wrapper distributionUrl with fast domestic mirrors (Aliyun, Tencent, Tsinghua, or your own URL) when opening/importing a project.</p>
+      <p>在打开/导入项目时，自动将 Gradle Wrapper 的 distributionUrl 替换为国内快速镜像（阿里云、腾讯、清华，或你自己的 URL）。</p>
       <p>Supports:</p>
+      <p>支持的功能:</p>
       <ul>
         <li>One-click replacement or auto-replace on project open</li>
+        <li>一键替换或在项目打开时自动替换</li>
         <li>Editable built-in mirror list (prevent link failure)</li>
+        <li>可编辑的内置镜像列表（防止链接失效）</li>
         <li>Custom mirror URL</li>
-        <li>“Replace only official address” switch</li>
+        <li>自定义镜像网址</li>
+        <li>“Only replace on official” switch</li>
+        <li>“仅在原始地址为官方地址时替换”开关</li>
       </ul>
       <p>No more slow services.gradle.org downloads—enjoy flying speed!</p>
+      <p>不再慢速下载 services.gradle.org——享受极速体验！</p>
+
     ]]></description>
 
     <change-notes><![CDATA[
       <ul>
         <li>1.0.0: Initial release with auto-replace and editable mirror table</li>
+        <li>1.0.0: 首次发布，具有自动替换和可编辑镜像列表</li>
+      </ul>
+      <ul>
+        <li>1.0.2: fix some bug</li>
+        <li>1.0.2: 修复已知问题</li>
       </ul>
     ]]>
     </change-notes>

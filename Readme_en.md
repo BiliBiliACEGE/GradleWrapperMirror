@@ -11,7 +11,7 @@ Automatically replace `services.gradle.org` with fast domestic mirrors (Aliyun, 
 - Supports **custom mirror** endpoint
 
 ## ⚙️ Requirements
-- IntelliJ IDEA 2022.3+ (build 223.*)
+- IntelliJ IDEA 2023.1+
 
 ## 📦 Install
 Install from Marketplace:  
