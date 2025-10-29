@@ -11,7 +11,7 @@
 - 支持自定义镜像地址
 
 ## ⚙️ 系统要求
-- IntelliJ IDEA 2022.3 及以上
+- IntelliJ IDEA 2023.1 及以上
 
 ## 📦 安装
 从Marketplace商店安装:  
