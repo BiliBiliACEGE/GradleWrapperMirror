@@ -1,6 +1,6 @@
 # Gradle Wrapper Mirror 插件
 
-中文 | [English](Readme_en)
+中文 | [English](Readme_en.md)
 
 打开 Gradle 项目时，自动把 `services.gradle.org` 替换成国内高速镜像（阿里云、腾讯云、清华 TUNA）。
 

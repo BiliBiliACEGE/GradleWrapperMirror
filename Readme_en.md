@@ -1,6 +1,6 @@
 # Gradle Wrapper Mirror
 
-English | [中文](Readme)
+English | [中文](Readme.md)
 
 Automatically replace `services.gradle.org` with fast domestic mirrors (Aliyun, Tencent, Tsinghua) when opening a Gradle project.
 
@@ -11,7 +11,7 @@ Automatically replace `services.gradle.org` with fast domestic mirrors (Aliyun, 
 - Supports **custom mirror** endpoint
 
 ## ⚙️ Requirements
-- IntelliJ IDEA 2023.1+
+- IntelliJ IDEA 2023.1+ 
 
 ## 📦 Install
 Install from Marketplace:  
